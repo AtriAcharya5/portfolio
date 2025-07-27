@@ -1,0 +1,480 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+body{
+    background-color: #485665;
+
+}
+#header{
+    height: 100vh;
+    width: 100%;
+    background-image: url('man.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+ 
+}
+.container
+{
+    margin-left: 60px;
+}
+.logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    padding: 10px 10px;
+    margin:10px 20px;
+    cursor: pointer;
+    /* transition: 0.5s; */
+}
+.logo:hover{
+    transform:scale(1.1)
+    
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+nav ul li a{
+    color: #04030F;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    font-weight: 300;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+  background-color:#ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+nav ul li a:hover::after{
+width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 20px;
+}
+.header-text p::after{
+ content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    transition: 0.5s;
+}
+.header-text p:hover::after{
+width: 100%;
+}
+.header-text h1{
+font-size: 40px;
+margin-top: 20px;
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+
+/* ---------------About---------------- */
+#about{
+    padding: 80px 0;
+    color: #ababab;
+    margin-left: 60px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+     flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 20px;
+}
+.about-col-2{
+    flex-basis: 60%;
+    margin-right: 30px;
+}
+.about-col-2 h1{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position:relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+    transition: 0.5s;
+}
+.tab-links:hover::after
+{
+    width: 100%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+
+}
+.tab-contents ul li span{
+    color: #ff004f;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab3{
+    display: block;
+}
+
+/* --------------services------- */
+#services{
+    margin-top: 50px;
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 100px; 
+  margin-top: 50px;
+}
+.sub-title{
+    color: white;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+font-size: 13px;
+font-weight: 700;
+border-radius: 20px;
+margin-right: 10px;
+color: white;
+cursor: pointer;
+}
+.services-list div h2 span{
+    color: #ff004f;
+    padding-bottom: 10px;
+}
+.services-list div a{
+    text-decoration: none;
+    
+}
+.service{
+    transition:transform 0.6s
+}
+ .service:hover{
+     transform:scale(1.1)
+}
+
+/* --------portfolio------- */
+#portfolio{
+     margin-top: 50px;
+    padding: 50px 0;
+
+}
+
+.work-list{   
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 100px; 
+  margin-top: 50px;
+
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition:transform 0.5s
+}
+.layer{
+ background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 20px;
+  margin-right: 10px;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.layer h3 span{
+   
+    color: #ff004f;
+   
+}
+.layer h3 {
+    padding-bottom: 10px;
+    
+}
+.work:hover img{
+    transform:scale(1.1)
+}
+
+/* ..........contact--------- */
+
+#contact{
+     margin-top: 50px;
+}
+.contact-left{
+    flex-basis: 35%;
+     
+}
+.contact-right{
+    flex-basis: 60%;
+   
+}
+.contact-left p{
+    margin-top: 20px;
+    font-size: large;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+}
+.btn.Btn{
+    display: inline-block;
+    background-color: #ff004f;
+    font-size: larger;
+    font-weight: 400;
+    padding: 10px 20px 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.contact-left a{
+    text-decoration: none;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100vh;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.btn{
+     display: inline-block;
+    background-color: #ff004f;
+    font-size: larger;
+    font-weight: 400;
+    padding: 10px 30px 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-decoration: none;
+    margin-left: 30%;
+    cursor: pointer;
+}
+ /* ---------copyright----- */
+
+ #copyright{
+    padding: 40px 50px;
+ }
+.copright-container{
+    font-size: large;
+    font-weight: 300;
+    font-family:  Times, serif;
+}
+.copright-container span{
+    color: #ff004f;
+    
+}
+
+
+
+
+/* .........responsive------ */
+
+/* Add this at the end of your existing CSS */
+
+/* Media Queries for Responsive Design */
+
+/* For tablets - between 768px and 1024px */
+@media only screen and (max-width: 1024px) {
+    .container {
+        margin-left: 30px;
+    }
+    
+    #about {
+        margin-left: 30px;
+    }
+    
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+    
+    .about-col-2 {
+        margin-top: 30px;
+    }
+    
+    .services-list {
+        gap: 50px;
+    }
+    
+    .work-list {
+        gap: 50px;
+    }
+    
+    form input, form textarea {
+        width: 90%;
+    }
+    
+    .btn {
+        margin-left: 15%;
+    }
+}
+
+/* For mobile devices - up to 767px */
+@media only screen and (max-width: 767px) {
+    .container {
+        margin-left: 15px;
+        padding-right: 15px;
+    }
+    
+    #about {
+        margin-left: 15px;
+    }
+    
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    nav ul li {
+        margin: 10px 15px;
+    }
+    
+    .header-text {
+        margin-top: 50%;
+        font-size: 16px;
+    }
+    
+    .header-text h1 {
+        font-size: 30px;
+    }
+    
+    .about-col-2 h1 {
+        font-size: 40px;
+    }
+    
+    .tab-titles {
+        flex-direction: column;
+    }
+    
+    .tab-links {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .services-list {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .work-list {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+    
+    .contact-right {
+        margin-top: 30px;
+    }
+    
+    form input, form textarea {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .btn {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    #copyright {
+        padding: 20px 15px;
+    }
+}
+
+/* For very small mobile devices - up to 480px */
+@media only screen and (max-width: 480px) {
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 5px 10px;
+    }
+    
+    .header-text {
+        margin-top: 70%;
+    }
+    
+    .header-text h1 {
+        font-size: 25px;
+    }
+    
+    .about-col-2 h1 {
+        font-size: 30px;
+    }
+    
+    .services-list div, .layer {
+        padding: 20px;
+    }
+}
